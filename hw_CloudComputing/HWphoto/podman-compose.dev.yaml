@@ -1,0 +1,11 @@
+services:
+  database:
+    volumes: 
+      - "./mysql/:/opt/" 
+      - "myvolume:/var/lib/mysql"
+    ports: ["13306:3306"] 
+    
+  web:
+    volumes: ["./web/myapp/:/opt/"] 
+  
+

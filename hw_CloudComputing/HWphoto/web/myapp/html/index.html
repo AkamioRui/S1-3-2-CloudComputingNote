@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+        }
+        #root{
+            width:100vw;
+            height:100vh;
+
+            display: flex;
+            flex-direction: column;
+
+        }
+        #header{
+            background-color: gainsboro;
+            
+            
+            min-height: 10px;
+            position:sticky;
+            top:0;
+
+            display: flex;
+            justify-content:center;
+            align-items: center;
+
+            font-size:3rem;
+
+        }
+        #image_box_flex{
+            background-color:darkgrey;
+            
+            flex:1;
+            padding: 10px 10px 10% 10px;
+            box-sizing: border-box;
+            
+            overflow-y: scroll;
+        }
+        #image_box_column{
+            
+            column-count: 2;
+        }
+        #image_box_column img{
+            width: 100%;
+
+            padding: 0 0 10px 0; 
+        }
+        #add_image{
+            background-color: purple;
+
+            width:fit-content;
+            position:fixed;
+            bottom: 10px;
+            left:50%;
+            transform: translate(-50%,-50%)
+
+        }
+        #upload_page{
+            background-color: dimgray;
+            position:fixed;
+            
+            display: block;
+            width:50%;
+            height:70%;
+            top:50%;
+            left:50%;
+            transform:translate(-50%,-50%);
+
+            /* display: none;    */
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="root">
+        <div id="header">
+            Photo Gallery
+        </div>
+        <div id="image_box_flex">
+            <div id="image_box_column">
+                <!-- @@@image -->
+                 <!-- <button onclick="console.log('1')"><img src="img.png" onclick="console.log('1')"></button> -->
+                <img src="img.png" onclick="goTo(1)">
+                <img src="img2.png" onclick="goTo(2)">
+                <img src="img3.png" onclick="goTo(3)">
+                <!-- /@@@image -->
+            </div>
+        </div>
+        <div id="add_image">
+            <button >cancel</button>
+        </div>
+
+
+        <!-- upload image section -->
+        <div id="upload_page">
+            <img>
+            <form enctype="multipart/form-data">
+                <input name="file" type="file" />
+                <br>
+                <label>name</label>
+                <input name="name" type="text" />
+                <br>
+                <label>location</label>
+                <input name="location" type="text" />
+                <br>
+                <label>time</label>
+                <input name="time" type="datetime-local" step="1" />
+                
+            </form>
+            <button onclick="uploadImage()">upload</button>
+        </div>
+
+        
+    </div>
+</body>
+<script>
+    let server_URI = "http://localhost:8080/";
+    STATE_close_upload_page();
+    function STATE_open_upload_page(){
+        
+        let upload_page = document.querySelector('#upload_page')
+        upload_page.style.display = 'block';
+        
+        // upload_page.querySelector('input[name="file"]').value = ''
+        // upload_page.querySelector('input[name="name"]').value = ''
+        // upload_page.querySelector('input[name="location"]').value = ''
+        // upload_page.querySelector('input[name="time"]').value = ''
+        
+        // show / hide form + refresh form
+        
+        
+        let addImage_button = document.querySelector('#add_image > button');
+        addImage_button.textContent = 'cancel';
+        addImage_button.onclick = ()=>{STATE_close_upload_page()};
+    }
+    function STATE_close_upload_page(){
+        let upload_page = document.querySelector('#upload_page');
+        upload_page.style.display = 'none';
+
+        let addImage_button = document.querySelector('#add_image > button')
+        addImage_button.textContent = 'add image';
+        addImage_button.onclick = ()=>{STATE_open_upload_page()};
+    }
+    function uploadImage(){
+        let upload_page_Div = document.querySelector("#upload_page");
+        let image_name  = upload_page_Div.querySelector('input[name="name"]').value;
+        let image       = upload_page_Div.querySelector('input[name="file"]').files[0];
+        let location    = upload_page_Div.querySelector('input[name="location"]').value;
+        let time        = upload_page_Div.querySelector('input[name="time"]').value;
+
+        let data = new FormData()
+        data.append('image_name',image_name)
+        data.append('image'     ,image     )
+        data.append('location'  ,location  )
+        data.append('time'      ,time      )
+
+        fetch(server_URI+"util/upload_image.php",{
+            method:'POST',
+            body:data
+        }).then(res=>{
+            window.location.href=server_URI
+        })
+
+
+    }
+
+    function goTo(id){
+        window.location.href= server_URI+`image.php?id=${id}`
+    }
+   
+
+</script>
+
+</html>

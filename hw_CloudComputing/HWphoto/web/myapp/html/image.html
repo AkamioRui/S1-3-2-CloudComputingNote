@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@@@image_name@@@</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            width:100%;
+            height:100vh;
+            background-color: grey;
+        }
+        #mybody{            
+            width:100%;
+            height:100%;
+        }
+        #header {
+            background-color: aliceblue;
+            width:100%;
+            height:5%;
+            box-sizing: border-box;
+            padding:  0px 10px 0px;
+
+            position:sticky;
+            top:0px;
+
+            display: flex;
+            align-items: center;
+            justify-content:space-between;
+
+        }
+        #content {
+            /* background-color: red; */
+            width:100%;
+           
+        
+            & > img {
+                width: 100%;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="mybody">
+        <div id="header">
+            <div>@@@image_name@@@</div>
+            <button onclick="goBack()">back</button>
+        </div>
+        <div id="content">
+            <!-- @@@image -->
+            <img src="img.png"/>
+            <!-- /@@@image -->
+        </div>
+        <div id="footer">
+            <p>@@@location@@@</p>
+            <p>@@@time@@@</p>
+            <button onclick="deleteId()">delete</button>
+        </div>
+    </div>
+</body>
+<script>
+    let server_URI = "http://localhost:8080/";
+    function goBack(){
+        window.location.href = server_URI
+    }
+    function deleteId(){
+        let data = new FormData();
+        data.append('id','@@@id@@@')
+        fetch(server_URI+'util/delete_image.php',{
+            method:'POST',
+            body:data
+        })
+        
+        goBack();
+    }
+</script>
+</html>

@@ -1,0 +1,22 @@
+GET http://localhost:8000/index.php
+
+### [good] util/delete_image.php
+GET http://localhost:8000/util/delete_image.php?id=3
+
+### [good] util/upload_image.php
+POST http://localhost:8000/util/upload_image.php
+Content-Type: multipart/form-data; boundary=hhhh
+
+--hhhh
+Content-Disposition: form-data; name='image'; filename='myimg.png'
+
+< img1.png
+--hhhh
+Content-Disposition: form-data; name='location'
+
+
+--hhhh
+Content-Disposition: form-data; name='time'
+
+2020-05-11 14:32:11
+--hhhh--

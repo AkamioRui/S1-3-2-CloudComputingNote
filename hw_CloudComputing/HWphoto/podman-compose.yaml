@@ -1,0 +1,32 @@
+services:
+  database:
+    build: ./mysql/
+    networks: ["mynetwork"]
+    volumes: ["myvolume:/var/lib/mysql"]
+    
+    healthcheck:
+      test: ["CMD", "mysqladmin","ping", "-h", "localhost"]
+      interval: 3s
+      timeout: 2s
+      retries: 5
+
+    
+  web:
+    build: ./web/
+    networks: ["mynetwork"]
+    ports: ["8080:8080"]
+
+    depends_on:
+      database:
+        condition: service_healthy
+    
+
+
+networks:
+  mynetwork:
+      driver: bridge
+
+volumes:  
+  myvolume:
+
+
