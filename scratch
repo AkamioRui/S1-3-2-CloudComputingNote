@@ -1,0 +1,228 @@
+Windows IP Configuration
+
+   Host Name . . . . . . . . . . . . : rui-qiang
+   Primary Dns Suffix  . . . . . . . :
+   Node Type . . . . . . . . . . . . : Hybrid
+   IP Routing Enabled. . . . . . . . : No
+   WINS Proxy Enabled. . . . . . . . : No
+
+Ethernet adapter Ethernet:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . : cable.tfn.net.tw
+   Description . . . . . . . . . . . : Intel(R) Ethernet Connection (16) I219-LM
+   Physical Address. . . . . . . . . : A0-36-BC-30-3F-33
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Ethernet adapter Ethernet 4:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : VirtualBox Host-Only Ethernet Adapter
+   Physical Address. . . . . . . . . : 0A-00-27-00-00-0A
+   DHCP Enabled. . . . . . . . . . . : No
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::a7a6:fc6f:5c99:500c%10(Preferred)
+   IPv4 Address. . . . . . . . . . . : 192.168.56.1(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . :
+   DHCPv6 IAID . . . . . . . . . . . : 1057620007
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-2A-C7-BC-1A-A0-36-BC-30-3F-33
+   DNS Servers . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Ethernet adapter Npcap Loopback Adapter:
+
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Npcap Loopback Adapter
+   Physical Address. . . . . . . . . : 02-00-4C-4F-4F-50
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+   Link-local IPv6 Address . . . . . : fe80::e4ad:1fcc:b8c5:ae13%8(Preferred)
+   Autoconfiguration IPv4 Address. . : 169.254.19.88(Preferred)
+   Subnet Mask . . . . . . . . . . . : 255.255.0.0
+   Default Gateway . . . . . . . . . :
+   DHCPv6 IAID . . . . . . . . . . . : 251789388
+   DHCPv6 Client DUID. . . . . . . . : 00-01-00-01-2A-C7-BC-1A-A0-36-BC-30-3F-33
+   DNS Servers . . . . . . . . . . . : fec0:0:0:ffff::1%1
+                                       fec0:0:0:ffff::2%1
+                                       fec0:0:0:ffff::3%1
+   NetBIOS over Tcpip. . . . . . . . : Enabled
+
+Wireless LAN adapter Local Area Connection* 3:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter #3
+   Physical Address. . . . . . . . . : 4C-03-4F-67-5A-67
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter Local Area Connection* 4:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft Wi-Fi Direct Virtual Adapter #4
+   Physical Address. . . . . . . . . : 4E-03-4F-67-5A-66
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Wireless LAN adapter Wi-Fi:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Intel(R) Wi-Fi 6 AX201 160MHz
+   Physical Address. . . . . . . . . : 4C-03-4F-67-5A-66
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+Ethernet adapter myBridge:
+
+   Media State . . . . . . . . . . . : Media disconnected
+   Connection-specific DNS Suffix  . :
+   Description . . . . . . . . . . . : Microsoft Network Adapter Multiplexor Driver
+   Physical Address. . . . . . . . . : 00-FF-AD-8C-48-5D
+   DHCP Enabled. . . . . . . . . . . : Yes
+   Autoconfiguration Enabled . . . . : Yes
+
+
+
+
+==> nmap -A google.com
+Starting Nmap 7.94SVN ( https://nmap.org ) at 2026-03-25 02:01 UTC
+Nmap scan report for google.com (142.250.204.46)
+Host is up (0.073s latency).
+Other addresses for google.com (not scanned): 2404:6800:4012:6::200e
+rDNS record for 142.250.204.46: hkg07s38-in-f14.1e100.net
+Not shown: 998 filtered tcp ports (no-response)
+PORT    STATE SERVICE   VERSION
+80/tcp  open  http      gws
+|_http-server-header: gws
+|_http-title: Did not follow redirect to http://www.google.com/
+| fingerprint-strings:
+|   GetRequest:
+|     HTTP/1.0 200 OK
+|     Date: Wed, 25 Mar 2026 02:06:41 GMT
+|     Expires: -1
+|     Cache-Control: private, max-age=0
+|     Content-Type: text/html; charset=ISO-8859-1
+|     Content-Security-Policy-Report-Only: object-src 'none';base-uri 'self';script-src 'nonce-fcq39b6xkSXIei7DgYj2kQ' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp
+|     Reporting-Endpoints: default="//www.google.com/httpservice/retry/jserror?ei=MUPDadzhFcLr1e8PhOm2gAQ&cad=crash&error=Page%20Crash&jsel=1&bver=2408&dpf=Pr_zwpqI6rQIGAxfvVkNz48tuWN3iinTeZFwclDJI1g"
+|     P3P: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+|     Server: gws
+|     X-XSS-Protection: 0
+|     X-Frame-Options: SAMEORIGIN
+|     Set-Cookie: __Secure-STRP=AEEP7gKq-PaZly4A2vT5kkQKXDwIOlTkCzvERMr-KyDN7PJagVYfWceP19u36XuHvrzB5MmCae5IQ4aS_vbB8-qAhy1y6LmmvHd6; expires=Wed, 25-Mar-2026 02:11:41 GMT; path=/; domai
+|   HTTPOptions:
+|     HTTP/1.0 405 Method Not Allowed
+|     Content-Type: text/html; charset=UTF-8
+|     Referrer-Policy: no-referrer
+|     Content-Length: 1592
+|     Date: Wed, 25 Mar 2026 02:06:41 GMT
+|     <!DOCTYPE html>
+|     <html lang=en>
+|     <meta charset=utf-8>
+|     <meta name=viewport content="initial-scale=1, minimum-scale=1, width=device-width">
+|     <title>Error 405 (Method Not Allowed)!!1</title>
+|     <style>
+|_    *{margin:0;padding:0}html,code{font:15px/22px arial,sans-serif}html{background:#fff;color:#222;padding:15px}body{margin:7% auto 0;max-width:390px;min-height:180px;padding:30px 0 15px}* > body{background:url(//www.google.com/images/errors/robot.png) 100% 5px no-repeat;padding-right:205px}p{margin:11px 0 22px;overflow:hidden}ins{color:#777;text-decoration:none}a img{border:0}@media screen and (max-width:772px){body{background:none;margin-top:0;max-width:none;padding-right:0}}#logo{background:url(//www.google.com/images/branding
+443/tcp open  ssl/https gws
+| ssl-cert: Subject: commonName=*.google.com
+| Subject Alternative Name: DNS:*.google.com, DNS:*.appengine.google.com, DNS:*.bdn.dev, DNS:*.origin-test.bdn.dev, DNS:*.cloud.google.com, DNS:*.crowdsource.google.com, DNS:*.datacompute.google.com, DNS:*.google.ca, DNS:*.google.cl, DNS:*.google.co.in, DNS:*.google.co.jp, DNS:*.google.co.uk, DNS:*.google.com.ar, DNS:*.google.com.au, DNS:*.google.com.br, DNS:*.google.com.co, DNS:*.google.com.mx, DNS:*.google.com.tr, DNS:*.google.com.vn, DNS:*.google.de, DNS:*.google.es, DNS:*.google.fr, DNS:*.google.hu, DNS:*.google.it, DNS:*.google.nl, DNS:*.google.pl, DNS:*.google.pt, DNS:*.googleapis.cn, DNS:*.gstatic.cn, DNS:*.gstatic-cn.com, DNS:googlecnapps.cn, DNS:*.googlecnapps.cn, DNS:googleapps-cn.com, DNS:*.googleapps-cn.com, DNS:gkecnapps.cn, DNS:*.gkecnapps.cn, DNS:googledownloads.cn, DNS:*.googledownloads.cn, DNS:recaptcha.net.cn, DNS:*.recaptcha.net.cn, DNS:recaptcha-cn.net, DNS:*.recaptcha-cn.net, DNS:widevine.cn, DNS:*.widevine.cn, DNS:ampproject.org.cn, DNS:*.ampproject.org.cn, DNS:ampproject.net.cn, DNS:*.ampproject.net.cn, DNS:google-analytics-cn.com, DNS:*.google-analytics-cn.com, DNS:googleadservices-cn.com, DNS:*.googleadservices-cn.com, DNS:googlevads-cn.com, DNS:*.googlevads-cn.com, DNS:googleapis-cn.com, DNS:*.googleapis-cn.com, DNS:googleoptimize-cn.com, DNS:*.googleoptimize-cn.com, DNS:doubleclick-cn.net, DNS:*.doubleclick-cn.net, DNS:*.fls.doubleclick-cn.net, DNS:*.g.doubleclick-cn.net, DNS:doubleclick.cn, DNS:*.doubleclick.cn, DNS:*.fls.doubleclick.cn, DNS:*.g.doubleclick.cn, DNS:dartsearch-cn.net, DNS:*.dartsearch-cn.net, DNS:googletraveladservices-cn.com, DNS:*.googletraveladservices-cn.com, DNS:googletagservices-cn.com, DNS:*.googletagservices-cn.com, DNS:googletagmanager-cn.com, DNS:*.googletagmanager-cn.com, DNS:googlesyndication-cn.com, DNS:*.googlesyndication-cn.com, DNS:*.safeframe.googlesyndication-cn.com, DNS:app-measurement-cn.com, DNS:*.app-measurement-cn.com, DNS:gvt1-cn.com, DNS:*.gvt1-cn.com, DNS:gvt2-cn.com, DNS:*.gvt2-cn.com, DNS:2mdn-cn.net, DNS:*.2mdn-cn.net, DNS:googleflights-cn.net, DNS:*.googleflights-cn.net, DNS:admob-cn.com, DNS:*.admob-cn.com, DNS:*.gemini.cloud.google.com, DNS:googlesandbox-cn.com, DNS:*.googlesandbox-cn.com, DNS:*.safenup.googlesandbox-cn.com, DNS:*.gstatic.com, DNS:*.metric.gstatic.com, DNS:*.gvt1.com, DNS:*.gcpcdn.gvt1.com, DNS:*.gvt2.com, DNS:*.gcp.gvt2.com, DNS:*.url.google.com, DNS:*.youtube-nocookie.com, DNS:*.ytimg.com, DNS:ai.android, DNS:android.com, DNS:*.android.com, DNS:*.flash.android.com, DNS:g.cn, DNS:*.g.cn, DNS:g.co, DNS:*.g.co, DNS:goo.gl, DNS:www.goo.gl, DNS:google-analytics.com, DNS:*.google-analytics.com, DNS:google.com, DNS:googlecommerce.com, DNS:*.googlecommerce.com, DNS:ggpht.cn, DNS:*.ggpht.cn, DNS:urchin.com, DNS:*.urchin.com, DNS:youtu.be, DNS:youtube.com, DNS:*.youtube.com, DNS:music.youtube.com, DNS:*.music.youtube.com, DNS:youtubeeducation.com, DNS:*.youtubeeducation.com, DNS:youtubekids.com, DNS:*.youtubekids.com, DNS:yt.be, DNS:*.yt.be, DNS:android.clients.google.com, DNS:*.android.google.cn, DNS:*.chrome.google.cn, DNS:*.developers.google.cn, DNS:*.aistudio.google.com
+| Not valid before: 2026-02-23T18:19:44
+|_Not valid after:  2026-05-18T18:19:43
+| tls-nextprotoneg:
+|   grpc-exp
+|   h2
+|   http/1.1
+|_  http/1.0
+|_ssl-date: TLS randomness does not represent time
+|_http-title: Did not follow redirect to https://www.google.com/
+| tls-alpn:
+|   grpc-exp
+|   h2
+|   http/1.1
+|_  http/1.0
+| fingerprint-strings:
+|   GetRequest:
+|     HTTP/1.0 200 OK
+|     Date: Wed, 25 Mar 2026 02:06:47 GMT
+|     Expires: -1
+|     Cache-Control: private, max-age=0
+|     Content-Type: text/html; charset=ISO-8859-1
+|     Content-Security-Policy-Report-Only: object-src 'none';base-uri 'self';script-src 'nonce-28_5mM2N3I4QTBdWhWxrQA' 'strict-dynamic' 'report-sample' 'unsafe-eval' 'unsafe-inline' https: http:;report-uri https://csp.withgoogle.com/csp/gws/other-hp
+|     Reporting-Endpoints: default="//www.google.com/httpservice/retry/jserror?ei=N0PDaemHJJOlvr0PgK-pyAs&cad=crash&error=Page%20Crash&jsel=1&bver=2408&dpf=Pr_zwpqI6rQIGAxfvVkNz48tuWN3iinTeZFwclDJI1g"
+|     Accept-CH: Sec-CH-Prefers-Color-Scheme
+|     P3P: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+|     Server: gws
+|     X-XSS-Protection: 0
+|     X-Frame-Options: SAMEORIGIN
+|     Set-Cookie: __Secure-STRP=AEEP7gJO9b6e-CdOas1eeBc03VY3ZC9Y-FzckxIOCT7kpEB4s5p0iuywG1gA1eNwcdAMOKKehHKfdLNP_7y7VMIrmVtqzHcRPjNJ; expires=Wed,
+|   TLSSessionReq:
+|     HTTP/1.0 400 Bad Request
+|     Content-Length: 54
+|     Content-Type: text/html; charset=UTF-8
+|     Date: Wed, 25 Mar 2026 02:07:00 GMT
+|_    <html><title>Error 400 (Bad Request)!!1</title></html>
+|_http-server-header: gws
+2 services unrecognized despite returning data. If you know the service/version, please submit the following fingerprints at https://nmap.org/cgi-bin/submit.cgi?new-service :
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port80-TCP:V=7.94SVN%I=7%D=3/25%Time=69C34331%P=x86_64-pc-linux-gnu%r(G
+SF:etRequest,108C,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Wed,\x2025\x20Mar\x2
+SF:02026\x2002:06:41\x20GMT\r\nExpires:\x20-1\r\nCache-Control:\x20private
+SF:,\x20max-age=0\r\nContent-Type:\x20text/html;\x20charset=ISO-8859-1\r\n
+SF:Content-Security-Policy-Report-Only:\x20object-src\x20'none';base-uri\x
+SF:20'self';script-src\x20'nonce-fcq39b6xkSXIei7DgYj2kQ'\x20'strict-dynami
+SF:c'\x20'report-sample'\x20'unsafe-eval'\x20'unsafe-inline'\x20https:\x20
+SF:http:;report-uri\x20https://csp\.withgoogle\.com/csp/gws/other-hp\r\nRe
+SF:porting-Endpoints:\x20default=\"//www\.google\.com/httpservice/retry/js
+SF:error\?ei=MUPDadzhFcLr1e8PhOm2gAQ&cad=crash&error=Page%20Crash&jsel=1&b
+SF:ver=2408&dpf=Pr_zwpqI6rQIGAxfvVkNz48tuWN3iinTeZFwclDJI1g\"\r\nP3P:\x20C
+SF:P=\"This\x20is\x20not\x20a\x20P3P\x20policy!\x20See\x20g\.co/p3phelp\x2
+SF:0for\x20more\x20info\.\"\r\nServer:\x20gws\r\nX-XSS-Protection:\x200\r\
+SF:nX-Frame-Options:\x20SAMEORIGIN\r\nSet-Cookie:\x20__Secure-STRP=AEEP7gK
+SF:q-PaZly4A2vT5kkQKXDwIOlTkCzvERMr-KyDN7PJagVYfWceP19u36XuHvrzB5MmCae5IQ4
+SF:aS_vbB8-qAhy1y6LmmvHd6;\x20expires=Wed,\x2025-Mar-2026\x2002:11:41\x20G
+SF:MT;\x20path=/;\x20domai")%r(HTTPOptions,6DC,"HTTP/1\.0\x20405\x20Method
+SF:\x20Not\x20Allowed\r\nContent-Type:\x20text/html;\x20charset=UTF-8\r\nR
+SF:eferrer-Policy:\x20no-referrer\r\nContent-Length:\x201592\r\nDate:\x20W
+SF:ed,\x2025\x20Mar\x202026\x2002:06:41\x20GMT\r\n\r\n<!DOCTYPE\x20html>\n
+SF:<html\x20lang=en>\n\x20\x20<meta\x20charset=utf-8>\n\x20\x20<meta\x20na
+SF:me=viewport\x20content=\"initial-scale=1,\x20minimum-scale=1,\x20width=
+SF:device-width\">\n\x20\x20<title>Error\x20405\x20\(Method\x20Not\x20Allo
+SF:wed\)!!1</title>\n\x20\x20<style>\n\x20\x20\x20\x20\*{margin:0;padding:
+SF:0}html,code{font:15px/22px\x20arial,sans-serif}html{background:#fff;col
+SF:or:#222;padding:15px}body{margin:7%\x20auto\x200;max-width:390px;min-he
+SF:ight:180px;padding:30px\x200\x2015px}\*\x20>\x20body{background:url\(//
+SF:www\.google\.com/images/errors/robot\.png\)\x20100%\x205px\x20no-repeat
+SF:;padding-right:205px}p{margin:11px\x200\x2022px;overflow:hidden}ins{col
+SF:or:#777;text-decoration:none}a\x20img{border:0}@media\x20screen\x20and\
+SF:x20\(max-width:772px\){body{background:none;margin-top:0;max-width:none
+SF:;padding-right:0}}#logo{background:url\(//www\.google\.com/images/brand
+SF:ing");
+==============NEXT SERVICE FINGERPRINT (SUBMIT INDIVIDUALLY)==============
+SF-Port443-TCP:V=7.94SVN%T=SSL%I=7%D=3/25%Time=69C34337%P=x86_64-pc-linux-
+SF:gnu%r(GetRequest,2E98,"HTTP/1\.0\x20200\x20OK\r\nDate:\x20Wed,\x2025\x2
+SF:0Mar\x202026\x2002:06:47\x20GMT\r\nExpires:\x20-1\r\nCache-Control:\x20
+SF:private,\x20max-age=0\r\nContent-Type:\x20text/html;\x20charset=ISO-885
+SF:9-1\r\nContent-Security-Policy-Report-Only:\x20object-src\x20'none';bas
+SF:e-uri\x20'self';script-src\x20'nonce-28_5mM2N3I4QTBdWhWxrQA'\x20'strict
+SF:-dynamic'\x20'report-sample'\x20'unsafe-eval'\x20'unsafe-inline'\x20htt
+SF:ps:\x20http:;report-uri\x20https://csp\.withgoogle\.com/csp/gws/other-h
+SF:p\r\nReporting-Endpoints:\x20default=\"//www\.google\.com/httpservice/r
+SF:etry/jserror\?ei=N0PDaemHJJOlvr0PgK-pyAs&cad=crash&error=Page%20Crash&j
+SF:sel=1&bver=2408&dpf=Pr_zwpqI6rQIGAxfvVkNz48tuWN3iinTeZFwclDJI1g\"\r\nAc
+SF:cept-CH:\x20Sec-CH-Prefers-Color-Scheme\r\nP3P:\x20CP=\"This\x20is\x20n
+SF:ot\x20a\x20P3P\x20policy!\x20See\x20g\.co/p3phelp\x20for\x20more\x20inf
+SF:o\.\"\r\nServer:\x20gws\r\nX-XSS-Protection:\x200\r\nX-Frame-Options:\x
+SF:20SAMEORIGIN\r\nSet-Cookie:\x20__Secure-STRP=AEEP7gJO9b6e-CdOas1eeBc03V
+SF:Y3ZC9Y-FzckxIOCT7kpEB4s5p0iuywG1gA1eNwcdAMOKKehHKfdLNP_7y7VMIrmVtqzHcRP
+SF:jNJ;\x20expires=Wed,")%r(TLSSessionReq,B3,"HTTP/1\.0\x20400\x20Bad\x20R
+SF:equest\r\nContent-Length:\x2054\r\nContent-Type:\x20text/html;\x20chars
+SF:et=UTF-8\r\nDate:\x20Wed,\x2025\x20Mar\x202026\x2002:07:00\x20GMT\r\n\r
+SF:\n<html><title>Error\x20400\x20\(Bad\x20Request\)!!1</title></html>");
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 355.36 seconds

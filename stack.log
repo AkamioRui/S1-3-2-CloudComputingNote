@@ -1,0 +1,576 @@
+unset GREP_OPTIONS
++ unset LANG
++ unset LANGUAGE
++ LC_ALL=en_US.utf8
++ export LC_ALL
+++ env
+++ grep -E '^OS_'
+++ cut -d = -f 1
++ unset
++ umask 022
++ PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/sbin
++++ dirname ./stack.sh
+++ cd .
+++ pwd
++ TOP_DIR=/home/rui/devstack
++ NOUNSET=
++ [[ -n '' ]]
+++ date +%s
++ DEVSTACK_START_TIME=1774107283
++ [[ -r /home/rui/devstack/.stackenv ]]
++ FILES=/home/rui/devstack/files
++ '[' '!' -d /home/rui/devstack/files ']'
++ '[' '!' -d /home/rui/devstack/inc ']'
++ '[' '!' -d /home/rui/devstack/lib ']'
++ [[ '' == \y ]]
++ [[ 1000 -eq 0 ]]
++ [[ -n '' ]]
++ [[ -e /home/rui/.no-devstack ]]
++ LAST_SPINNER_PID=
++ source /home/rui/devstack/functions
+++ [[ -z '' ]]
+++ declare -r -g _DEVSTACK_FUNCTIONS=1
+++++ dirname /home/rui/devstack/functions
++++ cd /home/rui/devstack
++++ pwd
+++ FUNC_DIR=/home/rui/devstack
+++ source /home/rui/devstack/functions-common
+++++ set +o
+++++ grep xtrace
++++ _XTRACE_FUNCTIONS_COMMON='set -o xtrace'
++++ set +o xtrace
+++ source /home/rui/devstack/inc/ini-config
+++++ set +o
+++++ grep xtrace
++++ INC_CONF_TRACE='set -o xtrace'
++++ set +o xtrace
+++ source /home/rui/devstack/inc/meta-config
+++++ set +o
+++++ grep xtrace
++++ _XTRACE_INC_META='set -o xtrace'
++++ set +o xtrace
+++ source /home/rui/devstack/inc/python
+++++ set +o
+++++ grep xtrace
++++ INC_PY_TRACE='set -o xtrace'
++++ set +o xtrace
+++ source /home/rui/devstack/inc/rootwrap
+++++ set +o
+++++ grep xtrace
++++ INC_ROOT_TRACE='set -o xtrace'
++++ set +o xtrace
+++ source /home/rui/devstack/inc/async
+++++ trueorfalse True DEVSTACK_PARALLEL
+++++ local xtrace
++++++ set +o
++++++ grep xtrace
+++++ xtrace='set -o xtrace'
+++++ set +o xtrace
++++ DEVSTACK_PARALLEL=True
++++ _ASYNC_BG_TIME=0
++++ grep xtrace
++++ set +o
+++ _XTRACE_FUNCTIONS='set -o xtrace'
+++ set +o xtrace
++ source /home/rui/devstack/lib/stack
++ GetDistro
++ GetOSVersion
++ source /etc/os-release
+++ PRETTY_NAME='Ubuntu 24.04.4 LTS'
+++ NAME=Ubuntu
+++ VERSION_ID=24.04
+++ VERSION='24.04.4 LTS (Noble Numbat)'
+++ VERSION_CODENAME=noble
+++ ID=ubuntu
+++ ID_LIKE=debian
+++ HOME_URL=https://www.ubuntu.com/
+++ SUPPORT_URL=https://help.ubuntu.com/
+++ BUG_REPORT_URL=https://bugs.launchpad.net/ubuntu/
+++ PRIVACY_POLICY_URL=https://www.ubuntu.com/legal/terms-and-policies/privacy-policy
+++ UBUNTU_CODENAME=noble
+++ LOGO=ubuntu-logo
++ [[ ubuntu =~ (almalinux|centos|rocky|rhel) ]]
++ _ensure_lsb_release
+++ command -v lsb_release
++ [[ -x /usr/bin/lsb_release ]]
++ return
+++ lsb_release -r -s
++ os_RELEASE=24.04
+++ lsb_release -c -s
++ os_CODENAME=noble
+++ lsb_release -i -s
++ os_VENDOR=Ubuntu
++ [[ Ubuntu =~ (Debian|Ubuntu) ]]
++ os_PACKAGE=deb
++ typeset -xr os_VENDOR
++ typeset -xr os_RELEASE
++ typeset -xr os_PACKAGE
++ typeset -xr os_CODENAME
++ [[ Ubuntu =~ (Ubuntu) ]]
++ DISTRO=noble
++ typeset -xr DISTRO
++ rm -f /home/rui/devstack/.localrc.auto
++ extract_localrc_section /home/rui/devstack/local.conf /home/rui/devstack/localrc /home/rui/devstack/.localrc.auto
++ local configfile=/home/rui/devstack/local.conf
++ local localrcfile=/home/rui/devstack/localrc
++ local localautofile=/home/rui/devstack/.localrc.auto
++ [[ -r /home/rui/devstack/local.conf ]]
++ [[ ! -r /home/rui/devstack/stackrc ]]
++ source /home/rui/devstack/stackrc
+++ [[ -z '' ]]
+++ declare -r -g _DEVSTACK_STACKRC=1
+++++ dirname /home/rui/devstack/stackrc
++++ cd /home/rui/devstack
++++ pwd
+++ RC_DIR=/home/rui/devstack
+++ source /home/rui/devstack/functions
++++ [[ -z 1 ]]
++++ return 0
+++ TARGET_BRANCH=master
+++ TRAILING_TARGET_BRANCH=master
+++ BRANCHLESS_TARGET_BRANCH=master
+++ DEST=/opt/stack
+++ DATA_DIR=/opt/stack/data
+++ SERVICE_DIR=/opt/stack/status
+++ SUBUNIT_OUTPUT=/opt/stack/devstack.subunit
+++ [[ 1000 -eq 0 ]]
++++ whoami
+++ STACK_USER=rui
+++ REGION_NAME=RegionOne
+++ KEYSTONE_REGION_NAME=RegionOne
+++ isset ENABLED_SERVICES
+++ [[ -v ENABLED_SERVICES ]]
+++ ENABLED_SERVICES=key
+++ ENABLED_SERVICES+=,n-api,n-cpu,n-cond,n-sch,n-novnc,n-api-meta
+++ ENABLED_SERVICES+=,placement-api,placement-client
+++ ENABLED_SERVICES+=,g-api
+++ ENABLED_SERVICES+=,c-sch,c-api,c-vol
+++ ENABLED_SERVICES+=,ovn-controller,ovn-northd,ovs-vswitchd,ovsdb-server
+++ ENABLED_SERVICES+=,q-svc,q-ovn-agent
+++ ENABLED_SERVICES+=,horizon
+++ ENABLED_SERVICES+=,rabbit,tempest,mysql,etcd3,dstat
+++ ENABLE_HTTPD_MOD_WSGI_SERVICES=True
+++ NOVA_ENABLED_APIS=osapi_compute,metadata
+++ [[ -f /home/rui/devstack/localrc ]]
+++ [[ -f /home/rui/devstack/.localrc.auto ]]
+++ CELLSV2_SETUP=superconductor
+++ HORIZON_APACHE_ROOT=/dashboard
++++ trueorfalse False USER_UNITS
++++ local xtrace
+++++ set +o
+++++ grep xtrace
++++ xtrace='set -o xtrace'
++++ set +o xtrace
+++ USER_UNITS=False
+++ [[ False == \T\r\u\e ]]
+++ SYSTEMD_DIR=/etc/systemd/system
+++ SYSTEMCTL='sudo systemctl'
+++ [[ -r /home/rui/devstack/.localrc.password ]]
++++ _get_python_version python3
++++ local interp=python3
++++ local version
+++++ which python3
++++ [[ -x /usr/bin/python3 ]]
+++++ python3 -c 'import sys; print("%s.%s" % sys.version_info[0:2])'
++++ version=3.12
++++ echo 3.12
+++ _DEFAULT_PYTHON3_VERSION=3.12
+++ export PYTHON3_VERSION=3.12
+++ PYTHON3_VERSION=3.12
+++ export 'VIRTUALENV_CMD=python3.12 -m venv'
+++ VIRTUALENV_CMD='python3.12 -m venv'
+++ '[' -t 1 ']'
+++ _LOG_COLOR_DEFAULT=True
++++ trueorfalse True LOG_COLOR
++++ local xtrace
+++++ set +o
+++++ grep xtrace
++++ xtrace='set -o xtrace'
++++ set +o xtrace
+++ LOG_COLOR=True
+++ [[ True == \T\r\u\e ]]
+++ TPUT_T=
+++ '[' xterm-256color ']'
+++ export 'PS4=+\[$(tput  setaf 242)\]$(short_source)\[$(tput  sgr0)\] '
+++ PS4='+\[$(tput  setaf 242)\]$(short_source)\[$(tput  sgr0)\] '
++++stackrc:source:167                        trueorfalse False ENFORCE_SCOPE
++++functions-common:trueorfalse:222          local xtrace
+++++functions-common:trueorfalse:223          grep xtrace
+++++functions-common:trueorfalse:223          set +o
++++functions-common:trueorfalse:223          xtrace='set -o xtrace'
++++functions-common:trueorfalse:224          set +o xtrace
+++stackrc:source:167                        ENFORCE_SCOPE=False
+++stackrc:source:174                        DEVSTACK_VENV=/opt/stack/data/venv
+++stackrc:source:180                        [[ Ubuntu =~ (CentOSStream|Rocky) ]]
++++stackrc:source:183                        trueorfalse True GLOBAL_VENV
++++functions-common:trueorfalse:222          local xtrace
+++++functions-common:trueorfalse:223          grep xtrace
+++++functions-common:trueorfalse:223          set +o
++++functions-common:trueorfalse:223          xtrace='set -o xtrace'
++++functions-common:trueorfalse:224          set +o xtrace
+++stackrc:source:183                        GLOBAL_VENV=True
++++stackrc:source:190                        trueorfalse False USE_VENV
++++functions-common:trueorfalse:222          local xtrace
+++++functions-common:trueorfalse:223          set +o
+++++functions-common:trueorfalse:223          grep xtrace
++++functions-common:trueorfalse:223          xtrace='set -o xtrace'
++++functions-common:trueorfalse:224          set +o xtrace
+++stackrc:source:190                        USE_VENV=False
+++stackrc:source:195                        ADDITIONAL_VENV_PACKAGES=
++++stackrc:source:199                        trueorfalse False DATABASE_QUERY_LOGGING
++++functions-common:trueorfalse:222          local xtrace
+++++functions-common:trueorfalse:223          grep xtrace
+++++functions-common:trueorfalse:223          set +o
++++functions-common:trueorfalse:223          xtrace='set -o xtrace'
++++functions-common:trueorfalse:224          set +o xtrace
+++stackrc:source:199                        DATABASE_QUERY_LOGGING=False
++++stackrc:source:203                        trueorfalse True MYSQL_GATHER_PERFORMANCE
++++functions-common:trueorfalse:222          local xtrace
+++++functions-common:trueorfalse:223          set +o
+++++functions-common:trueorfalse:223          grep xtrace
++++functions-common:trueorfalse:223          xtrace='set -o xtrace'
++++functions-common:trueorfalse:224          set +o xtrace
+++stackrc:source:203                        MYSQL_GATHER_PERFORMANCE=True
++++stackrc:source:208                        trueorfalse True MYSQL_REDUCE_MEMORY
++++functions-common:trueorfalse:222          local xtrace
+++++functions-common:trueorfalse:223          grep xtrace
+++++functions-common:trueorfalse:223          set +o
++++functions-common:trueorfalse:223          xtrace='set -o xtrace'
++++functions-common:trueorfalse:224          set +o xtrace
+++stackrc:source:208                        MYSQL_REDUCE_MEMORY=True
+++stackrc:source:219                        GIT_TIMEOUT=0
+++stackrc:source:225                        WSGI_MODE=uwsgi
+++stackrc:source:226                        [[ uwsgi != \u\w\s\g\i ]]
+++stackrc:source:234                        GIT_BASE=https://opendev.org
+++stackrc:source:237                        REQUIREMENTS_DIR=/opt/stack/requirements
+++stackrc:source:255                        DEVSTACK_SERIES=2026.1
+++stackrc:source:264                        CINDER_REPO=https://opendev.org/openstack/cinder.git
+++stackrc:source:265                        CINDER_BRANCH=master
+++stackrc:source:268                        GLANCE_REPO=https://opendev.org/openstack/glance.git
+++stackrc:source:269                        GLANCE_BRANCH=master
+++stackrc:source:272                        HORIZON_REPO=https://opendev.org/openstack/horizon.git
+++stackrc:source:273                        HORIZON_BRANCH=master
+++stackrc:source:276                        KEYSTONE_REPO=https://opendev.org/openstack/keystone.git
+++stackrc:source:277                        KEYSTONE_BRANCH=master
+++stackrc:source:280                        NEUTRON_REPO=https://opendev.org/openstack/neutron.git
+++stackrc:source:281                        NEUTRON_BRANCH=master
+++stackrc:source:284                        NOVA_REPO=https://opendev.org/openstack/nova.git
+++stackrc:source:285                        NOVA_BRANCH=master
+++stackrc:source:288                        SWIFT_REPO=https://opendev.org/openstack/swift.git
+++stackrc:source:289                        SWIFT_BRANCH=master
+++stackrc:source:292                        PLACEMENT_REPO=https://opendev.org/openstack/placement.git
+++stackrc:source:293                        PLACEMENT_BRANCH=master
+++stackrc:source:302                        REQUIREMENTS_REPO=https://opendev.org/openstack/requirements.git
+++stackrc:source:303                        REQUIREMENTS_BRANCH=master
+++stackrc:source:306                        TEMPEST_REPO=https://opendev.org/openstack/tempest.git
+++stackrc:source:307                        TEMPEST_BRANCH=master
+++stackrc:source:308                        TEMPEST_VENV_UPPER_CONSTRAINTS=master
+++stackrc:source:310                        OSTESTIMAGES_REPO=https://opendev.org/openstack/os-test-images.git
+++stackrc:source:311                        OSTESTIMAGES_BRANCH=master
+++stackrc:source:312                        OSTESTIMAGES_DIR=/opt/stack/os-test-images
+++stackrc:source:322                        GITREPO["python-cinderclient"]=https://opendev.org/openstack/python-cinderclient.git
+++stackrc:source:323                        GITBRANCH["python-cinderclient"]=master
+++stackrc:source:326                        GITREPO["python-brick-cinderclient-ext"]=https://opendev.org/openstack/python-brick-cinderclient-ext.git
+++stackrc:source:327                        GITBRANCH["python-brick-cinderclient-ext"]=master
+++stackrc:source:330                        GITREPO["python-barbicanclient"]=https://opendev.org/openstack/python-barbicanclient.git
+++stackrc:source:331                        GITBRANCH["python-barbicanclient"]=master
+++stackrc:source:332                        GITDIR["python-barbicanclient"]=/opt/stack/python-barbicanclient
+++stackrc:source:335                        GITREPO["python-glanceclient"]=https://opendev.org/openstack/python-glanceclient.git
+++stackrc:source:336                        GITBRANCH["python-glanceclient"]=master
+++stackrc:source:339                        GITREPO["python-ironicclient"]=https://opendev.org/openstack/python-ironicclient.git
+++stackrc:source:340                        GITBRANCH["python-ironicclient"]=master
+++stackrc:source:342                        GITDIR["python-ironicclient"]=/opt/stack/python-ironicclient
+++stackrc:source:345                        GITREPO["keystoneauth"]=https://opendev.org/openstack/keystoneauth.git
+++stackrc:source:346                        GITBRANCH["keystoneauth"]=master
+++stackrc:source:349                        GITREPO["python-keystoneclient"]=https://opendev.org/openstack/python-keystoneclient.git
+++stackrc:source:350                        GITBRANCH["python-keystoneclient"]=master
+++stackrc:source:353                        GITREPO["python-neutronclient"]=https://opendev.org/openstack/python-neutronclient.git
+++stackrc:source:354                        GITBRANCH["python-neutronclient"]=master
+++stackrc:source:357                        GITREPO["python-novaclient"]=https://opendev.org/openstack/python-novaclient.git
+++stackrc:source:358                        GITBRANCH["python-novaclient"]=master
+++stackrc:source:361                        GITREPO["python-swiftclient"]=https://opendev.org/openstack/python-swiftclient.git
+++stackrc:source:362                        GITBRANCH["python-swiftclient"]=master
+++stackrc:source:365                        GITREPO["python-openstackclient"]=https://opendev.org/openstack/python-openstackclient.git
+++stackrc:source:366                        GITBRANCH["python-openstackclient"]=master
+++stackrc:source:368                        GITDIR["python-openstackclient"]=/opt/stack/python-openstackclient
+++stackrc:source:371                        GITREPO["osc-placement"]=https://opendev.org/openstack/osc-placement.git
+++stackrc:source:372                        GITBRANCH["osc-placement"]=master
+++stackrc:source:383                        GITREPO["castellan"]=https://opendev.org/openstack/castellan.git
+++stackrc:source:384                        GITBRANCH["castellan"]=master
+++stackrc:source:387                        GITREPO["cliff"]=https://opendev.org/openstack/cliff.git
+++stackrc:source:388                        GITBRANCH["cliff"]=master
+++stackrc:source:391                        GITREPO["futurist"]=https://opendev.org/openstack/futurist.git
+++stackrc:source:392                        GITBRANCH["futurist"]=master
+++stackrc:source:395                        GITREPO["debtcollector"]=https://opendev.org/openstack/debtcollector.git
+++stackrc:source:396                        GITBRANCH["debtcollector"]=master
+++stackrc:source:399                        GITREPO["etcd3gw"]=https://opendev.org/openstack/etcd3gw.git
+++stackrc:source:400                        GITBRANCH["etcd3gw"]=master
+++stackrc:source:403                        GITREPO["automaton"]=https://opendev.org/openstack/automaton.git
+++stackrc:source:404                        GITBRANCH["automaton"]=master
+++stackrc:source:407                        GITREPO["oslo.cache"]=https://opendev.org/openstack/oslo.cache.git
+++stackrc:source:408                        GITBRANCH["oslo.cache"]=master
+++stackrc:source:411                        GITREPO["oslo.concurrency"]=https://opendev.org/openstack/oslo.concurrency.git
+++stackrc:source:412                        GITBRANCH["oslo.concurrency"]=master
+++stackrc:source:415                        GITREPO["oslo.config"]=https://opendev.org/openstack/oslo.config.git
+++stackrc:source:416                        GITBRANCH["oslo.config"]=master
+++stackrc:source:419                        GITREPO["oslo.context"]=https://opendev.org/openstack/oslo.context.git
+++stackrc:source:420                        GITBRANCH["oslo.context"]=master
+++stackrc:source:423                        GITREPO["oslo.db"]=https://opendev.org/openstack/oslo.db.git
+++stackrc:source:424                        GITBRANCH["oslo.db"]=master
+++stackrc:source:427                        GITREPO["oslo.i18n"]=https://opendev.org/openstack/oslo.i18n.git
+++stackrc:source:428                        GITBRANCH["oslo.i18n"]=master
+++stackrc:source:431                        GITREPO["oslo.limit"]=https://opendev.org/openstack/oslo.limit.git
+++stackrc:source:432                        GITBRANCH["oslo.limit"]=master
+++stackrc:source:435                        GITREPO["oslo.log"]=https://opendev.org/openstack/oslo.log.git
+++stackrc:source:436                        GITBRANCH["oslo.log"]=master
+++stackrc:source:439                        GITREPO["oslo.messaging"]=https://opendev.org/openstack/oslo.messaging.git
+++stackrc:source:440                        GITBRANCH["oslo.messaging"]=master
+++stackrc:source:443                        GITREPO["oslo.middleware"]=https://opendev.org/openstack/oslo.middleware.git
+++stackrc:source:444                        GITBRANCH["oslo.middleware"]=master
+++stackrc:source:447                        GITREPO["oslo.policy"]=https://opendev.org/openstack/oslo.policy.git
+++stackrc:source:448                        GITBRANCH["oslo.policy"]=master
+++stackrc:source:451                        GITREPO["oslo.privsep"]=https://opendev.org/openstack/oslo.privsep.git
+++stackrc:source:452                        GITBRANCH["oslo.privsep"]=master
+++stackrc:source:455                        GITREPO["oslo.reports"]=https://opendev.org/openstack/oslo.reports.git
+++stackrc:source:456                        GITBRANCH["oslo.reports"]=master
+++stackrc:source:459                        GITREPO["oslo.rootwrap"]=https://opendev.org/openstack/oslo.rootwrap.git
+++stackrc:source:460                        GITBRANCH["oslo.rootwrap"]=master
+++stackrc:source:463                        GITREPO["oslo.serialization"]=https://opendev.org/openstack/oslo.serialization.git
+++stackrc:source:464                        GITBRANCH["oslo.serialization"]=master
+++stackrc:source:467                        GITREPO["oslo.service"]=https://opendev.org/openstack/oslo.service.git
+++stackrc:source:468                        GITBRANCH["oslo.service"]=master
+++stackrc:source:471                        GITREPO["oslo.utils"]=https://opendev.org/openstack/oslo.utils.git
+++stackrc:source:472                        GITBRANCH["oslo.utils"]=master
+++stackrc:source:475                        GITREPO["oslo.versionedobjects"]=https://opendev.org/openstack/oslo.versionedobjects.git
+++stackrc:source:476                        GITBRANCH["oslo.versionedobjects"]=master
+++stackrc:source:479                        GITREPO["oslo.vmware"]=https://opendev.org/openstack/oslo.vmware.git
+++stackrc:source:480                        GITBRANCH["oslo.vmware"]=master
+++stackrc:source:483                        GITREPO["osprofiler"]=https://opendev.org/openstack/osprofiler.git
+++stackrc:source:484                        GITBRANCH["osprofiler"]=master
+++stackrc:source:487                        GITREPO["pycadf"]=https://opendev.org/openstack/pycadf.git
+++stackrc:source:488                        GITBRANCH["pycadf"]=master
+++stackrc:source:491                        GITREPO["stevedore"]=https://opendev.org/openstack/stevedore.git
+++stackrc:source:492                        GITBRANCH["stevedore"]=master
+++stackrc:source:495                        GITREPO["taskflow"]=https://opendev.org/openstack/taskflow.git
+++stackrc:source:496                        GITBRANCH["taskflow"]=master
+++stackrc:source:499                        GITREPO["tooz"]=https://opendev.org/openstack/tooz.git
+++stackrc:source:500                        GITBRANCH["tooz"]=master
+++stackrc:source:503                        GITREPO["pbr"]=https://opendev.org/openstack/pbr.git
+++stackrc:source:504                        GITBRANCH["pbr"]=master
+++stackrc:source:514                        GITREPO["cursive"]=https://opendev.org/openstack/cursive.git
+++stackrc:source:515                        GITBRANCH["cursive"]=master
+++stackrc:source:518                        GITREPO["glance_store"]=https://opendev.org/openstack/glance_store.git
+++stackrc:source:519                        GITBRANCH["glance_store"]=master
+++stackrc:source:522                        GITREPO["keystonemiddleware"]=https://opendev.org/openstack/keystonemiddleware.git
+++stackrc:source:523                        GITBRANCH["keystonemiddleware"]=master
+++stackrc:source:526                        GITREPO["ceilometermiddleware"]=https://opendev.org/openstack/ceilometermiddleware.git
+++stackrc:source:527                        GITBRANCH["ceilometermiddleware"]=master
+++stackrc:source:528                        GITDIR["ceilometermiddleware"]=/opt/stack/ceilometermiddleware
+++stackrc:source:531                        GITREPO["openstacksdk"]=https://opendev.org/openstack/openstacksdk.git
+++stackrc:source:532                        GITBRANCH["openstacksdk"]=master
+++stackrc:source:535                        GITREPO["os-brick"]=https://opendev.org/openstack/os-brick.git
+++stackrc:source:536                        GITBRANCH["os-brick"]=master
+++stackrc:source:539                        GITREPO["os-client-config"]=https://opendev.org/openstack/os-client-config.git
+++stackrc:source:540                        GITBRANCH["os-client-config"]=master
+++stackrc:source:541                        GITDIR["os-client-config"]=/opt/stack/os-client-config
+++stackrc:source:544                        GITREPO["os-vif"]=https://opendev.org/openstack/os-vif.git
+++stackrc:source:545                        GITBRANCH["os-vif"]=master
+++stackrc:source:548                        GITREPO["osc-lib"]=https://opendev.org/openstack/osc-lib.git
+++stackrc:source:549                        GITBRANCH["osc-lib"]=master
+++stackrc:source:552                        GITREPO["ironic-lib"]=https://opendev.org/openstack/ironic-lib.git
+++stackrc:source:553                        GITBRANCH["ironic-lib"]=master
+++stackrc:source:555                        GITDIR["ironic-lib"]=/opt/stack/ironic-lib
+++stackrc:source:558                        GITREPO["diskimage-builder"]=https://opendev.org/openstack/diskimage-builder.git
+++stackrc:source:559                        GITBRANCH["diskimage-builder"]=master
+++stackrc:source:560                        GITDIR["diskimage-builder"]=/opt/stack/diskimage-builder
+++stackrc:source:563                        GITREPO["neutron-lib"]=https://opendev.org/openstack/neutron-lib.git
+++stackrc:source:564                        GITBRANCH["neutron-lib"]=master
+++stackrc:source:565                        GITDIR["neutron-lib"]=/opt/stack/neutron-lib
+++stackrc:source:568                        GITREPO["os-resource-classes"]=https://opendev.org/openstack/os-resource-classes.git
+++stackrc:source:569                        GITBRANCH["os-resource-classes"]=master
+++stackrc:source:572                        GITREPO["os-traits"]=https://opendev.org/openstack/os-traits.git
+++stackrc:source:573                        GITBRANCH["os-traits"]=master
+++stackrc:source:576                        GITREPO["ovsdbapp"]=https://opendev.org/openstack/ovsdbapp.git
+++stackrc:source:577                        GITBRANCH["ovsdbapp"]=master
+++stackrc:source:578                        GITDIR["ovsdbapp"]=/opt/stack/ovsdbapp
+++stackrc:source:581                        GITREPO["os-ken"]=https://opendev.org/openstack/os-ken.git
+++stackrc:source:582                        GITBRANCH["os-ken"]=master
+++stackrc:source:583                        GITDIR["os-ken"]=/opt/stack/os-ken
+++stackrc:source:595                        IRONIC_PYTHON_AGENT_REPO=https://opendev.org/openstack/ironic-python-agent.git
+++stackrc:source:596                        IRONIC_PYTHON_AGENT_BRANCH=master
+++stackrc:source:599                        NOVNC_REPO=https://github.com/novnc/novnc.git
+++stackrc:source:600                        NOVNC_BRANCH=v1.3.0
+++stackrc:source:603                        SPICE_REPO=http://anongit.freedesktop.org/git/spice/spice-html5.git
+++stackrc:source:604                        SPICE_BRANCH=master
++++stackrc:source:610                        trueorfalse False ENABLE_VOLUME_MULTIATTACH
++++functions-common:trueorfalse:222          local xtrace
+++++functions-common:trueorfalse:223          set +o
+++++functions-common:trueorfalse:223          grep xtrace
++++functions-common:trueorfalse:223          xtrace='set -o xtrace'
++++functions-common:trueorfalse:224          set +o xtrace
+++stackrc:source:610                        ENABLE_VOLUME_MULTIATTACH=False
+++stackrc:source:615                        DEFAULT_VIRT_DRIVER=libvirt
+++stackrc:source:616                        VIRT_DRIVER=libvirt
+++stackrc:source:617                        case "$VIRT_DRIVER" in
+++stackrc:source:619                        LIBVIRT_TYPE=kvm
+++stackrc:source:620                        LIBVIRT_CPU_MODE=custom
+++stackrc:source:621                        LIBVIRT_CPU_MODEL=Nehalem
+++stackrc:source:623                        [[ -z Ubuntu ]]
+++stackrc:source:627                        [[ Ubuntu =~ (Debian|Ubuntu) ]]
+++stackrc:source:628                        LIBVIRT_GROUP=libvirt
+++stackrc:source:667                        CIRROS_VERSION=0.6.3
++++stackrc:source:668                        uname -m
+++stackrc:source:668                        CIRROS_ARCH=x86_64
++++stackrc:source:673                        trueorfalse True DOWNLOAD_DEFAULT_IMAGES
++++functions-common:trueorfalse:222          local xtrace
+++++functions-common:trueorfalse:223          grep xtrace
+++++functions-common:trueorfalse:223          set +o
++++functions-common:trueorfalse:223          xtrace='set -o xtrace'
++++functions-common:trueorfalse:224          set +o xtrace
+++stackrc:source:673                        DOWNLOAD_DEFAULT_IMAGES=True
+++stackrc:source:674                        [[ True == \T\r\u\e ]]
+++stackrc:source:675                        [[ -n '' ]]
+++stackrc:source:678                        case "$VIRT_DRIVER" in
+++stackrc:source:680                        case "$LIBVIRT_TYPE" in
+++stackrc:source:686                        DEFAULT_IMAGE_NAME=cirros-0.6.3-x86_64-disk
+++stackrc:source:687                        DEFAULT_IMAGE_FILE_NAME=cirros-0.6.3-x86_64-disk.img
+++stackrc:source:688                        IMAGE_URLS+=https://github.com/cirros-dev/cirros/releases/download/0.6.3/cirros-0.6.3-x86_64-disk.img
+++stackrc:source:701                        DOWNLOAD_DEFAULT_IMAGES=False
+++stackrc:source:710                        EXTRA_CACHE_URLS=
+++stackrc:source:713                        ETCD_VERSION=v3.5.21
+++stackrc:source:714                        ETCD_SHA256_AMD64=adddda4b06718e68671ffabff2f8cee48488ba61ad82900e639d108f2148501c
+++stackrc:source:715                        ETCD_SHA256_ARM64=95bf6918623a097c0385b96f139d90248614485e781ec9bee4768dbb6c79c53f
+++stackrc:source:716                        ETCD_SHA256_PPC64=6fb6ecb3d1b331eb177dc610a8efad3aceb1f836d6aeb439ba0bfac5d5c2a38c
+++stackrc:source:717                        ETCD_SHA256_S390X=a211a83961ba8a7e94f7d6343ad769e699db21a715ba4f3b68cf31ea28f9c951
+++stackrc:source:719                        is_arch x86_64
++++functions-common:is_arch:517              uname -m
+++functions-common:is_arch:517              [[ x86_64 == \x\8\6\_\6\4 ]]
+++stackrc:source:720                        ETCD_ARCH=amd64
+++stackrc:source:721                        ETCD_SHA256=adddda4b06718e68671ffabff2f8cee48488ba61ad82900e639d108f2148501c
+++stackrc:source:734                        ETCD_PORT=2379
+++stackrc:source:735                        ETCD_PEER_PORT=2380
+++stackrc:source:736                        ETCD_DOWNLOAD_URL=https://github.com/etcd-io/etcd/releases/download
+++stackrc:source:737                        ETCD_NAME=etcd-v3.5.21-linux-amd64
+++stackrc:source:738                        ETCD_DOWNLOAD_FILE=etcd-v3.5.21-linux-amd64.tar.gz
+++stackrc:source:739                        ETCD_DOWNLOAD_LOCATION=https://github.com/etcd-io/etcd/releases/download/v3.5.21/etcd-v3.5.21-linux-amd64.tar.gz
+++stackrc:source:741                        EXTRA_CACHE_URLS+=,https://github.com/etcd-io/etcd/releases/download/v3.5.21/etcd-v3.5.21-linux-amd64.tar.gz
+++stackrc:source:744                        CACHE_BACKEND=dogpile.cache.memcached
+++stackrc:source:745                        MEMCACHE_SERVERS=localhost:11211
+++stackrc:source:748                        for image_url in ${IMAGE_URLS//,/ }
++++stackrc:source:749                        grep -o -F https://github.com/cirros-dev/cirros/releases/download/0.6.3/cirros-0.6.3-x86_64-disk.img
++++stackrc:source:749                        wc -l
++++stackrc:source:749                        echo https://github.com/cirros-dev/cirros/releases/download/0.6.3/cirros-0.6.3-x86_64-disk.img
+++stackrc:source:749                        '[' 1 -gt 1 ']'
+++stackrc:source:755                        VOLUME_BACKING_FILE_SIZE=30G
+++stackrc:source:758                        VOLUME_NAME_PREFIX=volume-
+++stackrc:source:759                        INSTANCE_NAME_PREFIX=instance-
+++stackrc:source:762                        S3_SERVICE_PORT=3333
+++stackrc:source:765                        PRIVATE_NETWORK_NAME=private
+++stackrc:source:766                        PUBLIC_NETWORK_NAME=public
+++stackrc:source:768                        PUBLIC_INTERFACE=
+++stackrc:source:771                        SERVICE_PROTOCOL=http
++++stackrc:source:777                        nproc
++++stackrc:source:777                        nproc
+++stackrc:source:777                        API_WORKERS=2
+++stackrc:source:780                        SERVICE_TIMEOUT=60
+++stackrc:source:783                        NOVA_READY_TIMEOUT=60
+++stackrc:source:786                        SERVICE_GRACEFUL_SHUTDOWN_TIMEOUT=5
+++stackrc:source:789                        WORKER_TIMEOUT=80
++++stackrc:source:797                        trueorfalse False OFFLINE
++++functions-common:trueorfalse:222          local xtrace
+++++functions-common:trueorfalse:223          set +o
+++++functions-common:trueorfalse:223          grep xtrace
++++functions-common:trueorfalse:223          xtrace='set -o xtrace'
++++functions-common:trueorfalse:224          set +o xtrace
+++stackrc:source:797                        OFFLINE=False
++++stackrc:source:802                        trueorfalse False ERROR_ON_CLONE
++++functions-common:trueorfalse:222          local xtrace
+++++functions-common:trueorfalse:223          set +o
+++++functions-common:trueorfalse:223          grep xtrace
++++functions-common:trueorfalse:223          xtrace='set -o xtrace'
++++functions-common:trueorfalse:224          set +o xtrace
+++stackrc:source:802                        ERROR_ON_CLONE=False
++++stackrc:source:805                        trueorfalse True ENABLE_DEBUG_LOG_LEVEL
++++functions-common:trueorfalse:222          local xtrace
+++++functions-common:trueorfalse:223          grep xtrace
+++++functions-common:trueorfalse:223          set +o
++++functions-common:trueorfalse:223          xtrace='set -o xtrace'
++++functions-common:trueorfalse:224          set +o xtrace
+++stackrc:source:805                        ENABLE_DEBUG_LOG_LEVEL=True
+++stackrc:source:811                        FLOATING_RANGE=172.24.4.0/24
+++stackrc:source:812                        IPV4_ADDRS_SAFE_TO_USE=10.0.0.0/22
+++stackrc:source:813                        FIXED_RANGE=10.0.0.0/22
+++stackrc:source:814                        HOST_IP_IFACE=
+++stackrc:source:815                        HOST_IP=
+++stackrc:source:816                        HOST_IPV6=
++++stackrc:source:818                        get_default_host_ip 10.0.0.0/22 172.24.4.0/24 '' '' inet
++++functions-common:get_default_host_ip:752  local fixed_range=10.0.0.0/22
++++functions-common:get_default_host_ip:753  local floating_range=172.24.4.0/24
++++functions-common:get_default_host_ip:754  local host_ip_iface=
++++functions-common:get_default_host_ip:755  local host_ip=
++++functions-common:get_default_host_ip:756  local af=inet
++++functions-common:get_default_host_ip:759  '[' -z '' -o '' == dhcp ']'
++++functions-common:get_default_host_ip:760  host_ip=
+++++functions-common:get_default_host_ip:762  ip -f inet route list match default table all
+++++functions-common:get_default_host_ip:762  grep via
+++++functions-common:get_default_host_ip:762  head -1
+++++functions-common:get_default_host_ip:762  awk '/default/ {print $5}'
++++functions-common:get_default_host_ip:762  host_ip_iface=enp0s2
++++functions-common:get_default_host_ip:763  local host_ips
+++++functions-common:get_default_host_ip:764  sed /temporary/d
+++++functions-common:get_default_host_ip:764  awk '/inet/ {split($2,parts,"/");  print parts[1]}'
+++++functions-common:get_default_host_ip:764  LC_ALL=C
+++++functions-common:get_default_host_ip:764  ip -f inet addr show enp0s2
++++functions-common:get_default_host_ip:764  host_ips=10.0.2.15
++++functions-common:get_default_host_ip:765  local ip
++++functions-common:get_default_host_ip:766  for ip in $host_ips
++++functions-common:get_default_host_ip:773  [[ inet == \i\n\e\t\6 ]]
++++functions-common:get_default_host_ip:777  address_in_net 10.0.2.15 10.0.0.0/22
++++functions-common:address_in_net:2168      local ip=10.0.2.15
++++functions-common:address_in_net:2169      local range=10.0.0.0/22
++++functions-common:address_in_net:2170      local masklen=22
++++functions-common:address_in_net:2171      local network
++++++functions-common:address_in_net:2172      cidr2netmask 22
++++++functions-common:cidr2netmask:2190        local 'maskpat=255 255 255 255'
++++++functions-common:cidr2netmask:2191        local 'maskdgt=254 252 248 240 224 192 128'
++++++functions-common:cidr2netmask:2192        set -- 255 255 252
++++++functions-common:cidr2netmask:2193        echo 255.255.252.0
+++++functions-common:address_in_net:2172      maskip 10.0.0.0 255.255.252.0
+++++functions-common:maskip:2252              local ip=10.0.0.0
+++++functions-common:maskip:2253              local mask=255.255.252.0
+++++functions-common:maskip:2254              local l=10.0.0
+++++functions-common:maskip:2254              local r=0.0.0
+++++functions-common:maskip:2254              local n=255.255.252
+++++functions-common:maskip:2254              local m=255.252.0
+++++functions-common:maskip:2255              local subnet
+++++functions-common:maskip:2256              subnet=10.0.0.0
+++++functions-common:maskip:2257              echo 10.0.0.0
++++functions-common:address_in_net:2172      network=10.0.0.0
++++functions-common:address_in_net:2173      local subnet
++++++functions-common:address_in_net:2174      cidr2netmask 22
++++++functions-common:cidr2netmask:2190        local 'maskpat=255 255 255 255'
++++++functions-common:cidr2netmask:2191        local 'maskdgt=254 252 248 240 224 192 128'
++++++functions-common:cidr2netmask:2192        set -- 255 255 252
++++++functions-common:cidr2netmask:2193        echo 255.255.252.0
+++++functions-common:address_in_net:2174      maskip 10.0.2.15 255.255.252.0
+++++functions-common:maskip:2252              local ip=10.0.2.15
+++++functions-common:maskip:2253              local mask=255.255.252.0
+++++functions-common:maskip:2254              local l=10.0.2
+++++functions-common:maskip:2254              local r=0.2.15
+++++functions-common:maskip:2254              local n=255.255.252
+++++functions-common:maskip:2254              local m=255.252.0
+++++functions-common:maskip:2255              local subnet
+++++functions-common:maskip:2256              subnet=10.0.0.0
+++++functions-common:maskip:2257              echo 10.0.0.0
++++functions-common:address_in_net:2174      subnet=10.0.0.0
++++functions-common:address_in_net:2175      [[ 10.0.0.0 == 10.0.0.0 ]]
++++functions-common:get_default_host_ip:783  echo
+++stackrc:source:818                        HOST_IP=
+++stackrc:source:819                        '[' '' == '' ']'
+++stackrc:source:820                        die 820 'Could not determine host ip address.  See local.conf for suggestions on setting HOST_IP.'
+++functions-common:die:288                  local exitcode=0
+++functions-common:die:289                  set +o xtrace
+[Call Trace]
+./stack.sh:225:source
+/home/rui/devstack/stackrc:820:die
+[ERROR] /home/rui/devstack/stackrc:820 Could not determine host ip address.  See local.conf for suggestions on setting HOST_IP.
