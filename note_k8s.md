@@ -83,6 +83,7 @@
     - (CNI:*pod.IP -> node.IP* then send it there)
     - `pod (may be at a different node)`
 
+RuiMakaGithubioWibowo11062005
 
 ## ingress
 - is a k8s resource. it's a rule that maps hostname/path -> service
