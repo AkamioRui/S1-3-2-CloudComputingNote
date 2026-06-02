@@ -34,6 +34,7 @@ set podman_Test=%qemu% %machine% %memory% ^
 set k8s_Test=%qemu% %machine% %memory% ^
 -drive file=qemu\cloud\ubuntu_k8s.img,if=virtio ^
 -nic user,model=e1000,hostfwd=::11022-:22,hostfwd=::11080-:80 ^
+-smp 2 ^
 -nographic
 
 @REM qemu/qemu-system-x86_64.exe -M q35 -m 4G -drive file=qemu/cloud/ubuntu_k8s.img,if=virtio -nic user,model=e1000,hostfwd=::11022-:22
@@ -45,7 +46,7 @@ set k8s_Test=%qemu% %machine% %memory% ^
 
 
 
-%podman_Test%
+%k8s_Test%
 
 @REM -nic tap,model=e1000,ifname=myTap1,mac=52:54:00:00:00:01
 @REM the actual command. create 2 tab each running a device
